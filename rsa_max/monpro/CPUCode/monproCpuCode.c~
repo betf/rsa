@@ -1,0 +1,350 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "Maxfiles.h"
+#include "MaxSLiCInterface.h"
+
+#include<stdio.h>
+#include<math.h>
+#include<time.h>
+#include <stdint.h> 
+//#include "dbg.h"
+//#include "def.h"
+//#include "func.h"
+
+
+#include <stdlib.h>
+#include <stdint.h>
+//#include <MaxCompilerRT.h>
+//#include "Maxfiles.h" 			// Includes .max files
+//#include <MaxSLiCInterface.h>	// Simple Live CPU interface
+
+
+#define DATALENGTH (32)
+#define TCLK 0.5 // ns
+
+
+u32 u[NUM_OF_DIGITS+1];//dim(u)=s+1
+u32 v[NUM_OF_DIGITS+1];//dim(u)=s+1
+
+
+//Maxeler version 1
+
+
+
+u32 x_mgr[NUM_OF_DIGITS]; 
+u32 N[NUM_OF_DIGITS];
+u32 n0_pr;
+u32 t1[2*NUM_OF_DIGITS];
+u32 y[NUM_OF_DIGITS];
+u32 x[NUM_OF_DIGITS];
+
+static inline uint64_t RDTSC(){
+
+	  unsigned int hi, lo;
+	  __asm__ volatile("rdtsc" : "=a" (lo), "=d" (hi));
+	  return ((uint64_t)hi << 32) | lo;
+}
+
+
+
+// Test vector for NUM_OF_DIGITS = 32; 
+// x_mgr is x=1 in Montgomery's domain  x_mgr . x_mgr = x_mgr, if . is Montgomery's reduction
+
+void setVectors(void){
+
+n0_pr=0x0567b73d;
+
+//___Step 1, t is:___
+
+t1[ 0]= 0x98c071b9;
+t1[ 1]= 0xb8e0f43b;
+t1[ 2]= 0x434e336e;
+t1[ 3]= 0xa9a3ccc4;
+t1[ 4]= 0xe53c2f4d;
+t1[ 5]= 0x40a84736;
+t1[ 6]= 0x567bacc9;
+t1[ 7]= 0x06e039db;
+t1[ 8]= 0x20359ac3;
+t1[ 9]= 0x4036804f;
+t1[10]= 0xf30f8381;
+t1[11]= 0xc0cd5311;
+t1[12]= 0x87f367d0;
+t1[13]= 0x51861f47;
+t1[14]= 0x0ed1a32a;
+t1[15]= 0x9c84c2c2;
+t1[16]= 0x3f1d40d5;
+t1[17]= 0x09d75144;
+t1[18]= 0x0a00b40b;
+t1[19]= 0x9d600869;
+t1[20]= 0x034eae9c;
+t1[21]= 0x3c9b428d;
+t1[22]= 0x12206eb1;
+t1[23]= 0xd4209689;
+t1[24]= 0x66129c06;
+t1[25]= 0x4e801e1b;
+t1[26]= 0x6d8362bc;
+t1[27]= 0x81bdf9f6;
+t1[28]= 0x02a4c1af;
+t1[29]= 0x69b48175;
+t1[30]= 0x9ceac8e3;
+t1[31]= 0x6957e12a;
+t1[32]= 0x1a3ede50;
+t1[33]= 0xe48672fb;
+t1[34]= 0xb6316a07;
+t1[35]= 0x810cf947;
+t1[36]= 0x8a55dc18;
+t1[37]= 0x685ddfa8;
+t1[38]= 0xfa50645e;
+t1[39]= 0x5dd637a5;
+t1[40]= 0x13b11da9;
+t1[41]= 0x416de351;
+t1[42]= 0x831bf0e1;
+t1[43]= 0x36168013;
+t1[44]= 0x6c1a58dd;
+t1[45]= 0x2715a1ce;
+t1[46]= 0xbcf2f637;
+t1[47]= 0xdbf23fec;
+t1[48]= 0x8044a60d;
+t1[49]= 0x0604ffa1;
+t1[50]= 0x0404c849;
+t1[51]= 0xc353bf1f;
+t1[52]= 0x4406193a;
+t1[53]= 0xad18318e;
+t1[54]= 0x3572bafd;
+t1[55]= 0xc11f5d9b;
+t1[56]= 0x8fb91e5e;
+t1[57]= 0x1f6cd961;
+t1[58]= 0x3a6bf3e8;
+t1[59]= 0x742a35b7;
+t1[60]= 0xafbe9381;
+t1[61]= 0x89bd756f;
+t1[62]= 0xc891b20d;
+t1[63]= 0x1cf8920d;
+
+
+x_mgr[ 0] = 0x55955815;
+x_mgr[ 1] = 0xc730e3d3;
+x_mgr[ 2] = 0x417c39a0;
+x_mgr[ 3] = 0x07858f2e;
+x_mgr[ 4] = 0x96fe0efa;
+x_mgr[ 5] = 0x2c80ac27;
+x_mgr[ 6] = 0x1fa3e0ac;
+x_mgr[ 7] = 0x04a29f3b;
+x_mgr[ 8] = 0xb719b0e3;
+x_mgr[ 9] = 0x33e7f7eb;
+x_mgr[10] = 0x74cefb47;
+x_mgr[11] = 0xa6ad037a;
+x_mgr[12] = 0xcd34f8fc;
+x_mgr[13] = 0xfe79c9cb;
+x_mgr[14] = 0xc44450b9;
+x_mgr[15] = 0xccdb5c80;
+x_mgr[16] = 0xe1842656;
+x_mgr[17] = 0xc892069a;
+x_mgr[18] = 0x6e47e696;
+x_mgr[19] = 0xf7c4f636;
+x_mgr[20] = 0xa3304848;
+x_mgr[21] = 0x6799ebbe;
+x_mgr[22] = 0xca7a9285;
+x_mgr[23] = 0x425add2f;
+x_mgr[24] = 0x8fd9e8f0;
+x_mgr[25] = 0xe2fe25e6;
+x_mgr[26] = 0x656ea404;
+x_mgr[27] = 0x7a37caa2;
+x_mgr[28] = 0xa1598676;
+x_mgr[29] = 0x0d5f6cbe;
+x_mgr[30] = 0xc0c62aa0;
+x_mgr[31] = 0x561e9867;
+
+N[ 0] = 0xaa6aa7eb;
+N[ 1] = 0x38cf1c2c;
+N[ 2] = 0xbe83c65f;
+N[ 3] = 0xf87a70d1;
+N[ 4] = 0x6901f105;
+N[ 5] = 0xd37f53d8;
+N[ 6] = 0xe05c1f53;
+N[ 7] = 0xfb5d60c4;
+N[ 8] = 0x48e64f1c;
+N[ 9] = 0xcc180814;
+N[10] = 0x8b3104b8;
+N[11] = 0x5952fc85;
+N[12] = 0x32cb0703;
+N[13] = 0x01863634;
+N[14] = 0x3bbbaf46;
+N[15] = 0x3324a37f;
+N[16] = 0x1e7bd9a9;
+N[17] = 0x376df965;
+N[18] = 0x91b81969;
+N[19] = 0x083b09c9;
+N[20] = 0x5ccfb7b7;
+N[21] = 0x98661441;
+N[22] = 0x35856d7a;
+N[23] = 0xbda522d0;
+N[24] = 0x7026170f;
+N[25] = 0x1d01da19;
+N[26] = 0x9a915bfb;
+N[27] = 0x85c8355d;
+N[28] = 0x5ea67989;
+N[29] = 0xf2a09341;
+N[30] = 0x3f39d55f;
+N[31] = 0xa9e16798;
+
+// x array for a[0]*b
+x [0]= 0x98c071b9;
+x [1]= 0xce22384f;
+x [2]= 0xbd1fba20;
+x [3]= 0x22f28ec6;
+x [4]= 0x717f2a82;
+x [5]= 0x076e8733;
+x [6]= 0xcdc88e1c;
+x [7]= 0x8c6a57d7;
+x [8]= 0x2d088a9f;
+x [9]= 0x52071e47;
+x [10]= 0x8eae04d3;
+x [11]= 0xad653902;
+x [12]= 0xa19b0cac;
+x [13]= 0x978255a7;
+x [14]= 0xfe07372d;
+x [15]= 0x8c4a9680;
+x [16]= 0xcb12b50e;
+x [17]= 0x9fe17aa2;
+x [18]= 0xc6777a4e;
+x [19]= 0x4338c26e;
+x [20]= 0xf5b6ade8;
+x [21]= 0xb43fa696;
+x [22]= 0x2ed4bce9;
+x [23]= 0x04d74cdb;
+x [24]= 0xf8a29bb0;
+x [25]= 0x68be2bde;
+x [26]= 0x24c8d454;
+x [27]= 0xee854f4a;
+x [28]= 0x733e97ae;
+x [29]= 0x46cb3b96;
+x [30]= 0xde087f20;
+x [31]= 0x7bd8e873;
+
+// y array for a[0]*b
+y [0]= 0x1c9c839d;
+y [1]= 0x42976fa2;
+y [2]= 0x15e472f7;
+y [3]= 0x0283bbdd;
+y [4]= 0x327a70cb;
+y [5]= 0x0ee0af5d;
+y [6]= 0x0a93dedd;
+y [7]= 0x018cb31d;
+y [8]= 0x3d3658af;
+y [9]= 0x115a4d30;
+y [10]= 0x270cde17;
+y [11]= 0x37b8ae33;
+y [12]= 0x449a4d1b;
+y [13]= 0x5512e471;
+y [14]= 0x419d2e17;
+y [15]= 0x447c57df;
+y [16]= 0x4b64703c;
+y [17]= 0x430d7e31;
+y [18]= 0x24de355a;
+y [19]= 0x52d4f0a3;
+y [20]= 0x368e3b3f;
+y [21]= 0x22a28b81;
+y [22]= 0x43b0d1a8;
+y [23]= 0x162ee128;
+y [24]= 0x301745aa;
+y [25]= 0x4be2ce9b;
+y [26]= 0x21e8e8c1;
+y [27]= 0x28dbd2cd;
+y [28]= 0x35f0da44;
+y [29]= 0x04787c3f;
+y [30]= 0x407241d1;
+y [31]= 0x1cca660a;
+
+
+}
+
+
+
+int main(int argc, char **argv){
+
+uint64_t t;
+/*
+char *device_name = (argc==2 ? argv[1] : NULL);
+	unsigned int data_in[DATALENGTH];
+	unsigned int data_out_x[DATALENGTH];
+	unsigned int data_out_y[DATALENGTH];
+
+	int i;
+	int status = 0;
+
+	// Calculate expected I/O data
+	printf("Generating I/O data.\n");
+
+	srand(12345);
+	for(i=0; i<DATALENGTH; i++){
+		data_in[i] = rand();
+		//data_out[i] = 0;
+	}
+
+*/
+/*
+	// Setup the FPGA
+	printf("Opening and configuring FPGA.\n");
+
+	max_maxfile_t* maxfile;
+	max_device_handle_t* device;
+
+	maxfile = max_maxfile_init_MonPro();
+	device = max_open_device(maxfile, device_name);
+*/
+
+//extern u32 x_mgr[], N[], n0_pr;
+
+
+////////////////////////////////////////  Montgomery's reduction ///////////////////////////////////////////////
+
+	u32* x_ptr=x_mgr;
+
+		setVectors();		
+		u32 a=x_ptr[0];	
+
+	printf("Running DFE\n");
+	MonPro(DATALENGTH, a, x_ptr, data_out_x, data_out_y);
+
+// Run the streams
+	//printf("Streaming data to/from FPGA.\n");
+	//t = RDTSC();
+	/*max_set_scalar_input(device, "MonProKernel.a", a, FPGA_A);
+	max_run(device,
+			max_input("b", x_ptr, DATALENGTH * sizeof(unsigned int)),
+			max_output("x", data_out_x, DATALENGTH * sizeof(unsigned int)),
+			max_output("y", data_out_y, DATALENGTH * sizeof(unsigned int)),
+			max_runfor("MonProKernel", DATALENGTH),
+			max_end());
+*/
+//	t = RDTSC() - t;
+//	 printf ("It took me %lld clicks (%g ns).\n",t, t*TCLK);
+
+	// Verify output
+	printf("Verifying output\n");
+
+	for(i=0; i<DATALENGTH; i++){
+		if ( (data_out_x[i] != x[i]) || (data_out_y[i] != y[i])) {
+			printf("[%d] Verification error, in: %u and %u != expected: %u and %u\n", i, data_out_x[i], data_out_y[i], x[i], y[i]);
+			status = 1;
+		}
+	}
+
+	if (status)
+		printf("Test failed.\n");
+	else
+		printf("Test passed OK!\n");
+
+	//printf("Shutting down\n");
+	//max_close_device(device);
+	//max_destroy(maxfile);
+
+	//return status;
+	return 0;
+
+}
+
+

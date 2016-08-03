@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildProfile>
+<common>
+<boardModel type="MAX3424A"/>
+<simulation enabled="true"/>
+</common>
+<maxFiles>
+<maxFile buildName="monprox2" buildOrUseExisting="build">
+<runConfiguration askBeforeAutoBuild="false">
+<mainClass>monprox2.monprox2Manager</mainClass>
+<maxHeapSize>2</maxHeapSize>
+</runConfiguration>
+<selectEngineTarget enabled="false">MAX3424A</selectEngineTarget>
+</maxFile>
+</maxFiles>
+<cpuCode targetType="executable">
+<libraryName></libraryName>
+<exeName>monprox2</exeName>
+<arguments></arguments>
+<remoteExecution enabled="false">
+<remoteMachineName></remoteMachineName>
+<scriptName></scriptName>
+</remoteExecution>
+<customDefinitions>USE_SLIC:=1</customDefinitions>
+</cpuCode>
+<simulator>
+<deleteDRAM enabled="false"/>
+<maxDRAMSize enabled="false"></maxDRAMSize>
+<DRAMFile enabled="false"></DRAMFile>
+<socketName>bezanicmonprox</socketName>
+<startStopScript enabled="false"/>
+<numberOfDevices>1</numberOfDevices>
+<ethernetOneEnabled enabled="false"/>
+<ipAddressOne></ipAddressOne>
+<netmaskOne></netmaskOne>
+<pcapFileOne></pcapFileOne>
+<ethernetTwoEnabled enabled="false"/>
+<ipAddressTwo></ipAddressTwo>
+<netmaskTwo></netmaskTwo>
+<pcapFileTwo></pcapFileTwo>
+</simulator>
+</buildProfile>

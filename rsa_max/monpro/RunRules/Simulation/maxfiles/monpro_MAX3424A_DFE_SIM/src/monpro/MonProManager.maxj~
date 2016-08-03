@@ -1,0 +1,29 @@
+/**
+ * Document: MaxCompiler Tutorial (maxcompiler-tutorial)
+ * Chapter: 3      Example: 1      Name: Moving Average Simple
+ * MaxFile name: MovingAverageSimple
+ * Summary:
+ * 	Manager for the three point moving average kernel design.
+ *  All IO is between the CPU and the DFE.
+ */
+package monpro;
+
+import com.maxeler.maxcompiler.v2.build.EngineParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.managers.standard.Manager;
+import com.maxeler.maxcompiler.v2.managers.standard.Manager.IOType;
+
+class MonProManager {
+	public static void main(String[] args) {
+		EngineParameters params = new EngineParameters(args);
+		Manager manager = new Manager(params);
+
+		// Instantiate the kernel
+		Kernel kernel = new monproKernel(manager.makeKernelParameters());
+
+		manager.setKernel(kernel);
+		manager.setIO(IOType.ALL_CPU); // Connect all kernel ports to the CPU
+		manager.createSLiCinterface();
+		manager.build();
+	}
+}

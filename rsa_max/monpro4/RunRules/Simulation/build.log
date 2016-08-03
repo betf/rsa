@@ -1,0 +1,59 @@
+Wed 11:46: ########################################## 
+Wed 11:46: Compiling.
+Wed 11:46: ########################################## 
+
+Wed 11:46: MaxCompiler version: 2012.2.
+Wed 11:46: Build Simulation run rule for monpro4 start time: Wed Jun 05 11:46:35 BST 2013.
+Wed 11:46: Project location: /home/bezanic/workspace/monpro4.
+Wed 11:46: Detailed build log: /home/bezanic/workspace/monpro4/RunRules/Simulation/build.log.
+
+Wed 11:46: Compiling Engine Code.
+Wed 11:46: Engine building skipped (no changes on .max files).
+Wed 11:46: Compiling CPU Code.
+Wed 11:46: Run CPU project make files updating
+Wed 11:46: Executing command:
+Wed 11:46: java -jar /opt/maxeler/maxcompiler-2012.2/lib/MaxIDE/projectAdmin.jar -u /home/bezanic/workspace/monpro4 Simulation 
+Wed 11:46: Command output:
+
+Wed 11:46: MaxCompiler Project Admin Tool Version 2012.2
+Wed 11:46:  Copyright Maxeler Technologies 2010 - 2012. All rights reserved.
+Wed 11:46: Updating RunRule dependant Makefiles for RunRule 'Simulation'
+Wed 11:46: Found makefiles: 1
+Wed 11:46: 	Updated: Simulation
+Wed 11:46: Run CPU make.
+Wed 11:46: make RUNRULE=Simulation 
+Wed 11:46: Command output:
+Wed 11:46: make -f Makefile ../RunRules/Simulation/binaries/monprox4
+Wed 11:46: make[1]: Entering directory `/home/bezanic/workspace/monpro4/CPUCode'
+Wed 11:46: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=monprox4 -DMAXFILE_1="monprox4.max"  -o "../RunRules/Simulation/objects/monprox4CpuCode.o" -c "monprox4CpuCode.c"
+Wed 11:46: monprox4CpuCode.c: In function 'setVectors':
+Wed 11:46: monprox4CpuCode.c:142: warning: comparison between signed and unsigned integer expressions
+Wed 11:46: monprox4CpuCode.c:212: warning: comparison between signed and unsigned integer expressions
+Wed 11:46: monprox4CpuCode.c: In function 'main':
+Wed 11:46: monprox4CpuCode.c:310: warning: comparison between signed and unsigned integer expressions
+Wed 11:46: monprox4CpuCode.c:313: warning: format '%lld' expects type 'long long int', but argument 2 has type 'uint64_t'
+Wed 11:46: monprox4CpuCode.c:318: warning: comparison between signed and unsigned integer expressions
+Wed 11:46: monprox4CpuCode.c:291: warning: unused parameter 'argc'
+Wed 11:46: monprox4CpuCode.c:291: warning: unused parameter 'argv'
+Wed 11:46: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=monprox4 -DMAXFILE_1="monprox4.max"  -MM -MP -MT "../RunRules/Simulation/objects/monprox4CpuCode.o" "monprox4CpuCode.c" > "../RunRules/Simulation/objects/monprox4CpuCode.d"
+Wed 11:46: cc ../RunRules/Simulation/objects/monprox4CpuCode.o ../RunRules/Simulation/objects/slic_monprox4.o  -L/opt/maxeler/maxcompiler-2012.2/lib -L/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/lib -lslic -lmaxeleros -lm -lpthread  -o "../RunRules/Simulation/binaries/monprox4"
+Wed 11:46: make[1]: Leaving directory `/home/bezanic/workspace/monpro4/CPUCode'
+Wed 11:46: Build completed: Wed Jun 05 11:46:36 BST 2013
+
+
+Wed 11:46: ########################################## 
+Wed 11:46: Running
+Wed 11:46: ########################################## 
+Wed 11:46: Executing command:
+Wed 11:46: '/home/bezanic/workspace/monpro4/RunRules/Simulation/binaries/monprox4' 
+Wed 11:46: Command output:
+Wed 11:46: Running DFE
+Wed 11:46: SLiC Error #101 @ topology_internal.c:1531 - Failed to connect:
+Wed 11:46: 	* If you are running a simulation, check that "use_simulation=<simulator_name>" is set correctly in your SLiC configuration
+Wed 11:46: 	  (via the SLIC_CONF environment setting, or in your $SLIC_CONF_FILE or ~/.MaxCompiler_slic_user.conf file.)
+Wed 11:46: 	* If you are running on hardware, you may need to restart the MaxelerOS daemon.
+Wed 11:46: 	         (socket: bezanicmonprox, MaxelerOS daemon error: Socket connect/close failure)
+Wed 11:46: SLiC Error #506 @ singlet_internal.c:97 - Unable to initialise topology pool
+Wed 11:46: SLiC Error #526 @ singlet_internal.c:137 - Unable to allocate engine
+Wed 11:46: SLiC Error #518 @ engine.c:24 - Error reported from function "max_load".
+Wed 11:46: Aborted

@@ -1,0 +1,123 @@
+package monprox4;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class monprox4Kernel extends Kernel {
+
+	private static final DFEType type = dfeInt(32);
+
+	protected monprox4Kernel(KernelParameters parameters) {
+		super(parameters);
+
+	Integer w = 32;
+		//unsigned int s=32;
+
+		// Input
+		DFEVar a1 = io.scalarInput("a1" , dfeUInt(w));
+		DFEVar a2 = io.scalarInput("a2" , dfeUInt(w));
+		DFEVar a3 = io.scalarInput("a3" , dfeUInt(w));
+		DFEVar a4 = io.scalarInput("a4" , dfeUInt(w));
+		DFEVar b1 = io.input("b1", dfeUInt(w));
+		DFEVar b2 = io.input("b2", dfeUInt(w));
+		DFEVar b3 = io.input("b3", dfeUInt(w));
+		DFEVar b4 = io.input("b4", dfeUInt(w));
+
+		// Create a simple counter and add its count to the input
+		//HWVar count = control.count.simpleCounter(w);
+
+
+		// Generate hw for array 1
+		DFEVar x1;
+		DFEVar y1;
+		DFEVar pp1_1, pp2_1, pp3_1, pp4_1;
+		DFEVar pp5_1, pp6_1, pp7_1;
+
+		pp1_1 = ((a1 << 16) >> 16) * ((b1 << 16) >> 16);
+		pp2_1 = ((a1 << 16) >> 16) *(b1 >> 16);
+		pp3_1 = (a1 >> 16) * ((b1 << 16) >> 16);
+		pp4_1 = (a1 >> 16) * (b1 >> 16);
+
+		pp5_1 = pp2_1 + pp3_1;
+		pp6_1=(pp5_1 < pp3_1)?(pp4_1+(1 << 16)):pp4_1;
+
+		x1 = (pp5_1 << 16) + pp1_1;
+		pp7_1 = (x1 < pp1_1) ? (pp6_1+1) : (pp6_1+0);
+
+		y1 = (pp5_1 >> 16) + pp7_1;
+
+		// Generate hw for array 2
+		DFEVar x2;
+		DFEVar y2;
+		DFEVar pp1_2, pp2_2, pp3_2, pp4_2;
+		DFEVar pp5_2, pp6_2, pp7_2;
+
+		pp1_2 = ((a2 << 16) >> 16) * ((b2 << 16) >> 16);
+		pp2_2 = ((a2 << 16) >> 16) *(b2 >> 16);
+		pp3_2 = (a2 >> 16) * ((b2 << 16) >> 16);
+		pp4_2 = (a2 >> 16) * (b2 >> 16);
+
+		pp5_2 = pp2_2 + pp3_2;
+		pp6_2=(pp5_2 < pp3_2)?(pp4_2+(1 << 16)):pp4_2;
+
+		x2 = (pp5_2 << 16) + pp1_2;
+		pp7_2 = (x2 < pp1_2) ? (pp6_2+1) : (pp6_2+0);
+
+		y2 = (pp5_2 >> 16) + pp7_2;
+
+		// Generate hw for array 3
+		DFEVar x3;
+		DFEVar y3;
+		DFEVar pp1_3, pp2_3, pp3_3, pp4_3;
+		DFEVar pp5_3, pp6_3, pp7_3;
+
+		pp1_3 = ((a3 << 16) >> 16) * ((b3 << 16) >> 16);
+		pp2_3 = ((a3 << 16) >> 16) *(b3 >> 16);
+		pp3_3 = (a3 >> 16) * ((b3 << 16) >> 16);
+		pp4_3 = (a3 >> 16) * (b3 >> 16);
+
+		pp5_3 = pp2_3 + pp3_3;
+		pp6_3=(pp5_3 < pp3_3)?(pp4_3+(1 << 16)):pp4_3;
+
+		x3 = (pp5_3 << 16) + pp1_3;
+		pp7_3 = (x3 < pp1_3) ? (pp6_3+1) : (pp6_3+0);
+
+		y3 = (pp5_3 >> 16) + pp7_3;
+
+		// Generate hw for array 4
+		DFEVar x4;
+		DFEVar y4;
+		DFEVar pp1_4, pp2_4, pp3_4, pp4_4;
+		DFEVar pp5_4, pp6_4, pp7_4;
+
+		pp1_4 = ((a4 << 16) >> 16) * ((b4 << 16) >> 16);
+		pp2_4 = ((a4 << 16) >> 16) *(b4 >> 16);
+		pp3_4 = (a4 >> 16) * ((b4 << 16) >> 16);
+		pp4_4 = (a4 >> 16) * (b4 >> 16);
+
+		pp5_4 = pp2_4 + pp3_4;
+		pp6_4=(pp5_4 < pp3_4)?(pp4_4+(1 << 16)):pp4_4;
+
+		x4 = (pp5_4 << 16) + pp1_4;
+		pp7_4 = (x4 < pp1_4) ? (pp6_4+1) : (pp6_4+0);
+
+		y4 = (pp5_4 >> 16) + pp7_4;
+
+		// Output
+		io.output("x1", x1, dfeUInt(w));
+		io.output("y1", y1, dfeUInt(w));
+		io.output("x2", x2, dfeUInt(w));
+		io.output("y2", y2, dfeUInt(w));
+		io.output("x3", x3, dfeUInt(w));
+		io.output("y3", y3, dfeUInt(w));
+		io.output("x4", x4, dfeUInt(w));
+		io.output("y4", y4, dfeUInt(w));
+
+
+
+///////////////////////////////////////////////////*************** end of my kernel  *********************////////////////////////////////////////////
+	}
+
+}

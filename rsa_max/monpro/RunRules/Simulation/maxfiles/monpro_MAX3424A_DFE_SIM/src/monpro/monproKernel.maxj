@@ -1,0 +1,67 @@
+package monpro;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class monproKernel extends Kernel {
+
+	private static final DFEType type = dfeInt(32);
+
+	protected monproKernel(KernelParameters parameters) {
+		super(parameters);
+
+	Integer w = 32;
+		//unsigned int s=32;
+
+		// Input
+		DFEVar a = io.scalarInput("a" , dfeUInt(w));
+		DFEVar b = io.input("b", dfeUInt(w));
+
+		// Create a simple counter and add its count to the input
+		//HWVar count = control.count.simpleCounter(w);
+
+		DFEVar x;
+		DFEVar y;
+		DFEVar pp1, pp2, pp3, pp4;
+		DFEVar pp5, pp6, pp7;
+		//HWVar carry_1;
+		//HWVar b1=0;
+		//HWVar sum=0;
+		//HWVar sum_1=0;
+
+
+		pp1 = ((a << 16) >> 16) * ((b << 16) >> 16);
+		pp2 = ((a << 16) >> 16) *(b >> 16);
+		pp3 = (a >> 16) * ((b << 16) >> 16);
+		pp4 = (a >> 16) * (b >> 16);
+
+		//final Integer mask=0x0000ffff;
+		//HWVar b_shift=b; //fix me
+		//HWVar a_shift=a; //fix me
+
+		//pp1 = b ;
+		//pp2 = (a & mask).cast(hwUInt(w)) * b_shift.cast(hwUInt(w));
+		//pp3 = a_shift.cast(hwUInt(w)) * (b & mask).cast(hwUInt(w));
+		//pp4 = a_shift.cast(hwUInt(w)) * b_shift.cast(hwUInt(w));
+
+		pp5 = pp2 + pp3;
+		pp6=(pp5 < pp3)?(pp4+(1 << 16)):pp4;
+
+		x = (pp5 << 16) + pp1;
+		pp7 = (x < pp1) ? (pp6+1) : (pp6+0);
+
+		y = (pp5 >> 16) + pp7;
+
+		// Output
+		io.output("x", x, dfeUInt(w));
+		io.output("y", y, dfeUInt(w));
+		//io.output("x", a, hwUInt(width));
+		//io.output("y", a, hwUInt(width));
+
+
+///////////////////////////////////////////////////*************** end of my kernel  *********************////////////////////////////////////////////
+	}
+
+}

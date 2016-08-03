@@ -1,0 +1,53 @@
+Tue 10:34: ########################################## 
+Tue 10:34: Compiling.
+Tue 10:34: ########################################## 
+
+Tue 10:34: MaxCompiler version: 2012.2.
+Tue 10:34: Build Simulation run rule for monpro2 start time: Tue Mar 12 10:34:49 GMT 2013.
+Tue 10:34: Project location: /home/bezanic/workspace/monpro2.
+Tue 10:34: Detailed build log: /home/bezanic/workspace/monpro2/RunRules/Simulation/build.log.
+
+Tue 10:34: Compiling Engine Code.
+Tue 10:34: Engine building skipped (no changes on .max files).
+Tue 10:34: Compiling CPU Code.
+Tue 10:34: Run CPU project make files updating
+Tue 10:34: Executing command:
+Tue 10:34: java -jar /opt/maxeler/maxcompiler-2012.2/lib/MaxIDE/projectAdmin.jar -u /home/bezanic/workspace/monpro2 Simulation 
+Tue 10:34: Command output:
+
+Tue 10:34: MaxCompiler Project Admin Tool Version 2012.2
+Tue 10:34:  Copyright Maxeler Technologies 2010 - 2012. All rights reserved.
+Tue 10:34: Updating RunRule dependant Makefiles for RunRule 'Simulation'
+Tue 10:34: Found makefiles: 1
+Tue 10:34: 	Updated: Simulation
+Tue 10:34: Run CPU make.
+Tue 10:34: make RUNRULE=Simulation 
+Tue 10:34: Command output:
+Tue 10:34: make -f Makefile ../RunRules/Simulation/binaries/monpro
+Tue 10:34: make[1]: Entering directory `/home/bezanic/workspace/monpro2/CPUCode'
+Tue 10:34: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=monpro -DMAXFILE_1="monpro.max"  -o "../RunRules/Simulation/objects/monproCpuCode.o" -c "monproCpuCode.c"
+Tue 10:34: monproCpuCode.c: In function 'setVectors':
+Tue 10:34: monproCpuCode.c:142: warning: comparison between signed and unsigned integer expressions
+Tue 10:34: monproCpuCode.c:212: warning: comparison between signed and unsigned integer expressions
+Tue 10:34: monproCpuCode.c: In function 'main':
+Tue 10:34: monproCpuCode.c:307: warning: comparison between signed and unsigned integer expressions
+Tue 10:34: monproCpuCode.c:310: warning: format '%lld' expects type 'long long int', but argument 2 has type 'uint64_t'
+Tue 10:34: monproCpuCode.c:315: warning: comparison between signed and unsigned integer expressions
+Tue 10:34: monproCpuCode.c:291: warning: unused parameter 'argc'
+Tue 10:34: monproCpuCode.c:291: warning: unused parameter 'argv'
+Tue 10:34: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=monpro -DMAXFILE_1="monpro.max"  -MM -MP -MT "../RunRules/Simulation/objects/monproCpuCode.o" "monproCpuCode.c" > "../RunRules/Simulation/objects/monproCpuCode.d"
+Tue 10:34: cc ../RunRules/Simulation/objects/monproCpuCode.o ../RunRules/Simulation/objects/slic_monpro.o  -L/opt/maxeler/maxcompiler-2012.2/lib -L/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/lib -lslic -lmaxeleros -lm -lpthread  -o "../RunRules/Simulation/binaries/monpro"
+Tue 10:34: make[1]: Leaving directory `/home/bezanic/workspace/monpro2/CPUCode'
+Tue 10:34: Build completed: Tue Mar 12 10:34:49 GMT 2013
+
+
+Tue 10:34: ########################################## 
+Tue 10:34: Running
+Tue 10:34: ########################################## 
+Tue 10:34: Executing command:
+Tue 10:34: '/home/bezanic/workspace/monpro2/RunRules/Simulation/binaries/monpro' 
+Tue 10:34: Command output:
+Tue 10:34: Running DFE
+Tue 10:34: It took me 8431642956 clicks (3.15765e+09 ns).
+Tue 10:34: Verifying output
+Tue 10:34: Test passed OK!

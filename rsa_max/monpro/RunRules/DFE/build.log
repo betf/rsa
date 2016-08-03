@@ -1,0 +1,25 @@
+Wed 21:38: ########################################## 
+Wed 21:38: Compiling.
+Wed 21:38: ########################################## 
+
+Wed 21:38: MaxCompiler version: 2012.2.
+Wed 21:38: Build DFE run rule for monpro2 start time: Wed Mar 13 21:38:08 GMT 2013.
+Wed 21:38: Project location: /home/bezanic/workspace/monpro2.
+Wed 21:38: Detailed build log: /home/bezanic/workspace/monpro2/RunRules/DFE/build.log.
+
+Wed 21:38: Compiling Engine Code.
+Wed 21:38: Building monpro.max file. 
+Wed 21:38: Setting environment variable:
+Wed 21:38: MAXCOMPILER_BUILD_DIR : /home/bezanic/workspace/monpro2/RunRules/DFE/maxfiles
+Wed 21:38: MAX_BUILDPARAMS : DFEModel='MAX3424A' target='DFE' maxFileName='monpro' 
+Wed 21:38: Building output:
+Wed 21:38: #
+Wed 21:38: # There is insufficient memory for the Java Runtime Environment to continue.
+# Cannot create GC thread. Out of system resources.
+# An error report file with more information is saved as:
+# /home/bezanic/workspace/monpro2/EngineCode/hs_err_pid9013.log
+Wed 21:38: Building: monpro.max file finished.
+Wed 21:38: Build process failed while trying to create monpro.max file
+Wed 21:38: Engine build finished.Build failed: Wed Mar 13 21:38:13 GMT 2013
+
+

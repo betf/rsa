@@ -1,0 +1,45 @@
+package monpro;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class monproKernel extends Kernel {
+
+
+	protected monproKernel(KernelParameters parameters) {
+		super(parameters);
+
+		Integer w = 32;
+
+		// Input
+		DFEVar a = io.scalarInput("a" , dfeUInt(w));
+		DFEVar b = io.input("b", dfeUInt(w));
+
+		DFEVar x;
+		DFEVar y;
+		DFEVar pp1, pp2, pp3, pp4;
+		DFEVar pp5, pp6, pp7;
+
+		pp1 = ((a << 16) >> 16) * ((b << 16) >> 16);
+		pp2 = ((a << 16) >> 16) *(b >> 16);
+		pp3 = (a >> 16) * ((b << 16) >> 16);
+		pp4 = (a >> 16) * (b >> 16);
+
+		pp5 = pp2 + pp3;
+		pp6=(pp5 < pp3)?(pp4+(1 << 16)):pp4;
+
+		x = (pp5 << 16) + pp1;
+		pp7 = (x < pp1) ? (pp6+1) : (pp6+0);
+
+		y = (pp5 >> 16) + pp7;
+
+		// Output
+		io.output("x", x, dfeUInt(w));
+		io.output("y", y, dfeUInt(w));
+
+
+///////////////////////////////////////////////////*************** end of my kernel  *********************////////////////////////////////////////////
+	}
+
+}

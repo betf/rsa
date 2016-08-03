@@ -1,0 +1,390 @@
+Tue 10:53: PROGRESS: MaxCompiler version: 2012.2
+Tue 10:53: PROGRESS: Build "monprox2" start time: Tue Mar 12 10:53:18 GMT 2013
+Tue 10:53: PROGRESS: Main build process running as user bezanic on host <unknown host>
+Tue 10:53: INFO    : Loading build properties from bundled MaxCompiler_build.conf...
+Tue 10:53: INFO    : Loading default build properties from /opt/maxeler/MaxCompiler_build.conf
+Tue 10:53: INFO    : User build properties not found in file: /home/bezanic/.MaxCompiler_build_user.conf
+Tue 10:53: INFO    : No user-specified external build property file has been specified.
+Tue 10:53: INFO    : (Set environment variable MAXCOMPILER_BUILD_CONF_FILE to assign one)
+Tue 10:53: PROGRESS: Build location: /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM
+Tue 10:53: PROGRESS: Detailed build log available in "_build.log"
+Tue 10:53: INFO    : Created build manager monprox2 (monprox2_MAX3424A_DFE_SIM Tue Mar 12 10:53:18 GMT 2013). (10:53:18 12/03/13)
+Tue 10:53: INFO    : Working in dir: /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM
+Tue 10:53: INFO    : Java class path (2 paths):
+Tue 10:53: INFO    : 	/home/bezanic/workspace/monpro3/EngineCode/bin
+Tue 10:53: INFO    : 	/opt/maxeler/maxcompiler-2012.2/lib/MaxCompiler.jar
+Tue 10:53: INFO    : Java process started by 'main' method in class 'monprox2.monprox2Manager'.
+Tue 10:53: INFO    : build.arbitrated_core_cache parameter is blank, not using core-cache
+Tue 10:53: INFO    : Checking license files in directory: /opt/maxeler/maxcompiler-2012.2/licenses
+Tue 10:53: INFO    : All license signatures valid.
+Tue 10:53: INFO    : Backing-up source-files (old source files in build directory will be removed first)...
+Tue 10:53: INFO    : Source directories: /home/bezanic/workspace/monpro3/EngineCode/src:
+Tue 10:53: INFO    : Deleting directory: src
+Tue 10:53: PROGRESS: Instantiating manager
+Tue 10:53: USER    : 
+Tue 10:53: USER    : ENGINE BUILD PARAMETERS
+Tue 10:53: USER    : 	 Build name: monprox2_MAX3424A_DFE_SIM
+Tue 10:53: USER    : 	   DFEModel: MAX3424A                 
+Tue 10:53: USER    : 	maxFileName: monprox2                 
+Tue 10:53: USER    : 	     target: DFE_SIM                  
+Tue 10:53: INFO    : Deleting /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/monprox2Kernel_graph_warnings.txt
+Tue 10:53: INFO    : Deleting /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/monprox2Kernel.graphs
+Tue 10:53: PROGRESS: Instantiating kernel "monprox2Kernel"
+Tue 10:53: PROGRESS: Compiling manager (CPU I/O Only)
+Tue 10:53: PROGRESS: 
+Tue 10:53: PROGRESS: Compiling kernel "monprox2Kernel"
+Tue 10:53: INFO    : Configuration:
+Tue 10:53: INFO    : 	KernelConfiguration.allowDSPCascading = true                                                [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.allowInputsOutputsBeforeFlushNode = false                               [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.allowZeroLatencyNodeHold = false                                        [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.board = MAX3424A                                                        [Init: MAX2116B, change: MAX3424A]
+Tue 10:53: INFO    : 	KernelConfiguration.bramBitsThreshold = 2080                                                [Init: 2080]
+Tue 10:53: INFO    : 	KernelConfiguration.buildTarget = MAXCOMPILERSIM_HOST_DRIVEN                                [Init: NONE, change: MAXCOMPILERSIM_HOST_DRIVEN]
+Tue 10:53: INFO    : 	KernelConfiguration.cePipelining = 2                                                        [Init: 2]
+Tue 10:53: INFO    : 	KernelConfiguration.clockPhaseBalanceThreshold = 0.1                                        [Init: 0.1]
+Tue 10:53: INFO    : 	KernelConfiguration.clockPhasingRetries = 50                                                [Init: 50]
+Tue 10:53: INFO    : 	KernelConfiguration.dumpNeighboursString =                                                  [Init: ]
+Tue 10:53: INFO    : 	KernelConfiguration.enableCeReplication = true                                              [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.enableClockPhasePartitioning = false                                    [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.enableDebugIOControlRegs = true                                         [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.enableDummyBuild = false                                                [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.enableKernelProfiler = false                                            [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.enablePipelinedComputeController = false                                [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.enableShadowRegister = false                                            [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.fifoSrlRegisterStages = 1                                               [Init: 1]
+Tue 10:53: INFO    : 	KernelConfiguration.flushOnInputDataCongtiguous = false                                     [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.forceStatefulNodesWithoutResetAfterFlush = true                         [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.hardwareDebugDepth = 512                                                [Init: 512]
+Tue 10:53: INFO    : 	KernelConfiguration.hwHierarchyMode = UNSET                                                 [Init: UNSET]
+Tue 10:53: INFO    : 	KernelConfiguration.latencyAnnotation = false                                               [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.latencyAnnotationIOs =                                                  [Init: null]
+Tue 10:53: INFO    : 	KernelConfiguration.maxCoalescedFifoWidth = 2147483647                                      [Init: 2147483647]
+Tue 10:53: INFO    : 	KernelConfiguration.maxPreAdderFanOut = 1                                                   [Init: 1]
+Tue 10:53: INFO    : 	KernelConfiguration.netlistMode = false                                                     [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.numPhotonStateMachines = 1                                              [Init: 1]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.ceCounterRegisterDuplication = 1                          [Init: 1]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.conditionalArithmetic = true                              [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.counterChainWrapPipelining = 0                            [Init: 0]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.dspAddChain = OPTIMISE                                    [Init: null, Init after BuildTarget change: OPTIMISE]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableBUFGCE = false                                      [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableBetterInputRegistering = false                      [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableBetterRegistering = false                           [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableFIFOCoalescingAcrossPlacementConstraints = false    [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableFifoCoalescing = true                               [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableFullPrecisionBinaryOpConstants = false              [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableMappedMemoryHostReadBack = true                     [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableMultiCycleReset = false                             [Init: false]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enablePowerTwoFloatMult = true                            [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.enableStateMachineRegisterMerging = true                  [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.inputFlushDistanceFactor = 0                              [Init: 0]
+Tue 10:53: INFO    : 	KernelConfiguration.optimizations.triAdd = true                                             [Init: true]
+Tue 10:53: INFO    : 	KernelConfiguration.replicateNodeCeLog2NumPartitions = 0                                    [Init: 0]
+Tue 10:53: INFO    : 	KernelConfiguration.romBRAMBitsThreshold = 2080                                             [Init: 2080]
+Tue 10:53: INFO    : 	KernelConfiguration.simulation.ramAddressCollisionBehaviour = EXCEPTION                     [Init: EXCEPTION]
+Tue 10:53: INFO    : 	KernelConfiguration.simulation.ramOutOfBoundsAccessBehaviour = EXCEPTION                    [Init: EXCEPTION]
+Tue 10:53: INFO    : 	KernelConfiguration.simulation.simProgressMessageFrequency = 0                              [Init: 0]
+Tue 10:53: INFO    : 
+Tue 10:53: INFO    :  -- 
+Tue 10:53: INFO    : Writing current graph to: monprox2Kernel_original.pxg
+Tue 10:53: INFO    : Running kernel graph-pass 'GeneratePXG'.
+Tue 10:53: INFO    : Graph-pass 'GeneratePXG' took 214.037 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ReachabilityPass'.
+Tue 10:53: INFO    : Graph-pass 'ReachabilityPass' took 5.33424 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'FindInputsLeadingToFlush'.
+Tue 10:53: INFO    : Graph-pass 'FindInputsLeadingToFlush' took 105.814 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'CheckForFlushNodeViolations'.
+Tue 10:53: INFO    : Graph-pass 'CheckForFlushNodeViolations' took 819.044 탎 (1 iterations)
+Tue 10:53: INFO    : Deleting directory: neighbours
+Tue 10:53: INFO    : Running Photon pre-schedule graph optimisations
+Tue 10:53: INFO    : Running kernel graph-pass 'AlignOrEradicatePrintfs'.
+Tue 10:53: INFO    : Graph-pass 'AlignOrEradicatePrintfs' took 768.269 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'FoldConstantsPass'.
+Tue 10:53: INFO    : Graph-pass 'FoldConstantsPass' took 34.3797 ms (2 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'OptimiseNodesPass'.
+Tue 10:53: INFO    : Graph-pass 'OptimiseNodesPass' took 39.7824 ms (2 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'TriAddExtractionPass'.
+Tue 10:53: INFO    : Graph-pass 'TriAddExtractionPass' took 1.54459 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'DSPMultiplyAddExtractionPass'.
+Tue 10:53: INFO    : Optimized 0 sub-graphs into DSP multiply/add chains (Virtex6 mode).
+Tue 10:53: INFO    : Graph-pass 'DSPMultiplyAddExtractionPass' took 21.2873 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ConditionalAddExtractionPass'.
+Tue 10:53: INFO    : Optimized 0 sub-graphs into conditional adds/subs/triadds.
+Tue 10:53: INFO    : Graph-pass 'ConditionalAddExtractionPass' took 502.045 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'PO2FPMultOptimiser'.
+Tue 10:53: INFO    : Graph-pass 'PO2FPMultOptimiser' took 168.027 탎 (1 iterations)
+Tue 10:53: INFO    : Running Photon simulation preparation
+Tue 10:53: INFO    : Running kernel graph-pass 'PrepareSimulationPass'.
+Tue 10:53: INFO    : Graph-pass 'PrepareSimulationPass' took 141.937 탎 (1 iterations)
+Tue 10:53: INFO    : Logging Photon stats to: monprox2Kernel_photon_stats.csv
+Tue 10:53: INFO    : Deleting /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/monprox2Kernel_photon_stats.csv
+Tue 10:53: INFO    : Running kernel graph-pass 'StatsPass'.
+Tue 10:53: INFO    : Graph-pass 'StatsPass' took 1.51768 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'CollectNumericExceptions'.
+Tue 10:53: INFO    : Graph-pass 'CollectNumericExceptions' took 155.235 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'StreamOffsetDivExpand'.
+Tue 10:53: INFO    : Graph-pass 'StreamOffsetDivExpand' took 67.9220 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'FindIllegalLoops'.
+Tue 10:53: INFO    : Graph-pass 'FindIllegalLoops' took 914.428 탎 (1 iterations)
+Tue 10:53: INFO    : Scheduling Photon graph (pass 1)
+Tue 10:53: INFO    : Running kernel graph-pass 'MarkConstantPass'.
+Tue 10:53: INFO    : Graph-pass 'MarkConstantPass' took 778.520 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'MIPScheduler'.
+Tue 10:53: INFO    : Running command: "/opt/maxeler/maxcompiler-2012.2/bin/glpsol" --intopt  --model "scheduler.mod" --data "monprox2Kernel_scheduler_1_C.dat" --display "monprox2Kernel_scheduler_1_C.out" --log "monprox2Kernel_scheduler_1_C.log"
+Tue 10:53: INFO    : Checking for file hash changes...
+Tue 10:53: INFO    : Hash changed for file: 'monprox2Kernel_scheduler_1_C.dat'
+Tue 10:53: INFO    : Reading model section from scheduler.mod...
+Tue 10:53: INFO    : 95 lines were read
+Tue 10:53: INFO    : Reading data section from monprox2Kernel_scheduler_1_C.dat...
+Tue 10:53: INFO    : 427 lines were read
+Tue 10:53: INFO    : Generating schedulingEquation...
+Tue 10:53: INFO    : Generating bufferingEquation...
+Tue 10:53: INFO    : Generating afterFlushNode...
+Tue 10:53: INFO    : Generating lockNodesAtSameTime...
+Tue 10:53: INFO    : Generating forcePairConstraints...
+Tue 10:53: INFO    : Generating autoVarLatencyUserMin...
+Tue 10:53: INFO    : Generating autoVarLatencyUserMax...
+Tue 10:53: INFO    : Generating fifos...
+Tue 10:53: INFO    : Model has been successfully generated
+Tue 10:53: INFO    : ipp_basic_tech:  1 row(s) and 1 column(s) removed
+Tue 10:53: INFO    : ipp_reduce_bnds: 1 pass(es) made, 0 bound(s) reduced
+Tue 10:53: INFO    : ipp_basic_tech:  0 row(s) and 0 column(s) removed
+Tue 10:53: INFO    : ipp_reduce_coef: 1 pass(es) made, 0 coefficient(s) reduced
+Tue 10:53: INFO    : lpx_intopt: presolved MIP has 172 rows, 130 columns, 427 non-zeros
+Tue 10:53: INFO    : lpx_intopt: 130 integer columns, none of which are binary
+Tue 10:53: INFO    : lpx_adv_basis: size of triangular part = 172
+Tue 10:53: INFO    : Solving LP relaxation...
+Tue 10:53: INFO    :       0:   objval =  -6.450000000e+02   infeas =   1.000000000e+00 (0)
+Tue 10:53: INFO    :     119:   objval =   3.266000000e+03   infeas =   0.000000000e+00 (0)
+Tue 10:53: INFO    : *   119:   objval =   3.266000000e+03   infeas =   0.000000000e+00 (0)
+Tue 10:53: INFO    : *   130:   objval =   5.780000000e+02   infeas =   0.000000000e+00 (0)
+Tue 10:53: INFO    : OPTIMAL SOLUTION FOUND
+Tue 10:53: INFO    : Integer optimization begins...
+Tue 10:53: INFO    : +   130: mip =     not found yet >=              -inf        (1; 0)
+Tue 10:53: INFO    : +   130: >>>>>   5.780000000e+02 >=   5.780000000e+02   0.0% (1; 0)
+Tue 10:53: INFO    : +   130: mip =   5.780000000e+02 >=     tree is empty   0.0% (0; 1)
+Tue 10:53: INFO    : INTEGER OPTIMAL SOLUTION FOUND
+Tue 10:53: INFO    : Time used:   0.0 secs
+Tue 10:53: INFO    : Memory used: 0.6 Mb (653301 bytes)
+Tue 10:53: INFO    : Model has been successfully processed
+Tue 10:53: INFO    : Deleting /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/monprox2Kernel_schedule_report.csv
+Tue 10:53: INFO    : Graph-pass 'MIPScheduler' took 83.8568 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'SubstituteEqPlaceholders'.
+Tue 10:53: INFO    : Graph-pass 'SubstituteEqPlaceholders' took 95.4230 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ScheduleApplier'.
+Tue 10:53: INFO    : Graph-pass 'ScheduleApplier' took 2.87809 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'StatsPass'.
+Tue 10:53: INFO    : Graph-pass 'StatsPass' took 901.213 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ReachabilityPass'.
+Tue 10:53: INFO    : Graph-pass 'ReachabilityPass' took 2.79988 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'CheckForFlushNodeViolations'.
+Tue 10:53: INFO    : Graph-pass 'CheckForFlushNodeViolations' took 133.732 탎 (1 iterations)
+Tue 10:53: INFO    : Running Photon post-schedule graph optimisations (pass 1)
+Tue 10:53: INFO    : Running kernel graph-pass 'TapFIFOsPass'.
+Tue 10:53: INFO    : Graph-pass 'TapFIFOsPass' took 942.453 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'FoldFIFOsPass'.
+Tue 10:53: INFO    : Graph-pass 'FoldFIFOsPass' took 430.360 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ValidateFIFOs'.
+Tue 10:53: INFO    : Graph-pass 'ValidateFIFOs' took 123.667 탎 (1 iterations)
+Tue 10:53: INFO    : Scheduling Photon graph (pass 2)
+Tue 10:53: INFO    : Running kernel graph-pass 'MarkConstantPass'.
+Tue 10:53: INFO    : Graph-pass 'MarkConstantPass' took 441.429 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'MIPScheduler'.
+Tue 10:53: INFO    : Running command: "/opt/maxeler/maxcompiler-2012.2/bin/glpsol" --intopt  --model "scheduler.mod" --data "monprox2Kernel_scheduler_2_C.dat" --display "monprox2Kernel_scheduler_2_C.out" --log "monprox2Kernel_scheduler_2_C.log"
+Tue 10:53: INFO    : Checking for file hash changes...
+Tue 10:53: INFO    : Hash changed for file: 'monprox2Kernel_scheduler_2_C.dat'
+Tue 10:53: INFO    : Reading model section from scheduler.mod...
+Tue 10:53: INFO    : 95 lines were read
+Tue 10:53: INFO    : Reading data section from monprox2Kernel_scheduler_2_C.dat...
+Tue 10:53: INFO    : 427 lines were read
+Tue 10:53: INFO    : Generating schedulingEquation...
+Tue 10:53: INFO    : Generating bufferingEquation...
+Tue 10:53: INFO    : Generating afterFlushNode...
+Tue 10:53: INFO    : Generating lockNodesAtSameTime...
+Tue 10:53: INFO    : Generating forcePairConstraints...
+Tue 10:53: INFO    : Generating autoVarLatencyUserMin...
+Tue 10:53: INFO    : Generating autoVarLatencyUserMax...
+Tue 10:53: INFO    : Generating fifos...
+Tue 10:53: INFO    : Model has been successfully generated
+Tue 10:53: INFO    : ipp_basic_tech:  1 row(s) and 1 column(s) removed
+Tue 10:53: INFO    : ipp_reduce_bnds: 1 pass(es) made, 0 bound(s) reduced
+Tue 10:53: INFO    : ipp_basic_tech:  0 row(s) and 0 column(s) removed
+Tue 10:53: INFO    : ipp_reduce_coef: 1 pass(es) made, 0 coefficient(s) reduced
+Tue 10:53: INFO    : lpx_intopt: presolved MIP has 172 rows, 130 columns, 427 non-zeros
+Tue 10:53: INFO    : lpx_intopt: 130 integer columns, none of which are binary
+Tue 10:53: INFO    : lpx_adv_basis: size of triangular part = 172
+Tue 10:53: INFO    : Solving LP relaxation...
+Tue 10:53: INFO    :       0:   objval =  -6.450000000e+02   infeas =   1.000000000e+00 (0)
+Tue 10:53: INFO    :     119:   objval =   3.266000000e+03   infeas =   0.000000000e+00 (0)
+Tue 10:53: INFO    : *   119:   objval =   3.266000000e+03   infeas =   0.000000000e+00 (0)
+Tue 10:53: INFO    : *   130:   objval =   5.780000000e+02   infeas =   0.000000000e+00 (0)
+Tue 10:53: INFO    : OPTIMAL SOLUTION FOUND
+Tue 10:53: INFO    : Integer optimization begins...
+Tue 10:53: INFO    : +   130: mip =     not found yet >=              -inf        (1; 0)
+Tue 10:53: INFO    : +   130: >>>>>   5.780000000e+02 >=   5.780000000e+02   0.0% (1; 0)
+Tue 10:53: INFO    : +   130: mip =   5.780000000e+02 >=     tree is empty   0.0% (0; 1)
+Tue 10:53: INFO    : INTEGER OPTIMAL SOLUTION FOUND
+Tue 10:53: INFO    : Time used:   0.0 secs
+Tue 10:53: INFO    : Memory used: 0.6 Mb (653301 bytes)
+Tue 10:53: INFO    : Model has been successfully processed
+Tue 10:53: INFO    : Deleting /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/monprox2Kernel_schedule_report.csv
+Tue 10:53: INFO    : Graph-pass 'MIPScheduler' took 47.6980 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'RemoveDistMeasurementNodes'.
+Tue 10:53: INFO    : Graph-pass 'RemoveDistMeasurementNodes' took 18.7720 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'SubstituteEqPlaceholders'.
+Tue 10:53: INFO    : Graph-pass 'SubstituteEqPlaceholders' took 48.6870 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ScheduleApplier'.
+Tue 10:53: INFO    : Graph-pass 'ScheduleApplier' took 21.8454 ms (1 iterations)
+Tue 10:53: INFO    : Maximum stream latency for kernel 'monprox2Kernel': 21
+Tue 10:53: INFO    : Using user logic for flush.
+Tue 10:53: INFO    : Running kernel graph-pass 'StatsPass'.
+Tue 10:53: INFO    : Graph-pass 'StatsPass' took 997.674 탎 (1 iterations)
+Tue 10:53: INFO    : Running Photon post-schedule graph optimisations (pass 2)
+Tue 10:53: INFO    : Running kernel graph-pass 'TapFIFOsPass'.
+Tue 10:53: INFO    : Graph-pass 'TapFIFOsPass' took 14.7939 ms (2 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'FoldFIFOsPass'.
+Tue 10:53: INFO    : Graph-pass 'FoldFIFOsPass' took 552.037 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'MarkConstantPass'.
+Tue 10:53: INFO    : Graph-pass 'MarkConstantPass' took 303.892 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ScheduleAsserter'.
+Tue 10:53: INFO    : Graph-pass 'ScheduleAsserter' took 830.525 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'ReplaceEvalStreamOffsetNodes'.
+Tue 10:53: INFO    : Graph-pass 'ReplaceEvalStreamOffsetNodes' took 136.980 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'FIFOReport'.
+Tue 10:53: INFO    : Graph-pass 'FIFOReport' took 1.59009 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'StatsPass'.
+Tue 10:53: INFO    : Graph-pass 'StatsPass' took 954.619 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'RemoveUntypedConstants'.
+Tue 10:53: INFO    : Graph-pass 'RemoveUntypedConstants' took 15.4547 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'VariableSizeMappedRegInserter'.
+Tue 10:53: INFO    : Graph-pass 'VariableSizeMappedRegInserter' took 151.720 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'MarkConstantPass'.
+Tue 10:53: INFO    : Graph-pass 'MarkConstantPass' took 254.880 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'MakeMaxFileNodeData'.
+Tue 10:53: INFO    : Graph-pass 'MakeMaxFileNodeData' took 4.42081 ms (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'MoveFanoutRegsForwards'.
+Tue 10:53: INFO    : Graph-pass 'MoveFanoutRegsForwards' took 142.527 탎 (1 iterations)
+Tue 10:53: INFO    : Optimization report for Kernel 'monprox2Kernel'.
+Tue 10:53: INFO    : Enabled optimizations:
+Tue 10:53: INFO    : 	Tri-Adder
+Tue 10:53: INFO    : 	DSP-Multiplication
+Tue 10:53: INFO    : 	Conditional (Tri)Adds/Subs/AddSubs
+Tue 10:53: INFO    : 	Power-of-2 Floating Point
+Tue 10:53: INFO    : Creating a preliminary MaxCompilerDesignData.dat. (@ CoreCompile monprox2Kernel)
+Tue 10:53: INFO    : Deleting /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/MaxCompilerDesignData.dat
+Tue 10:53: INFO    : Running kernel graph-pass 'MarkConstantPass'.
+Tue 10:53: INFO    : Graph-pass 'MarkConstantPass' took 269.953 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'MaxConstantLatency'.
+Tue 10:53: INFO    : Graph-pass 'MaxConstantLatency' took 921.032 탎 (1 iterations)
+Tue 10:53: INFO    : Running kernel graph-pass 'SimCodeGraphPass'.
+Tue 10:53: INFO    : Graph-pass 'SimCodeGraphPass' took 10.5440 ms (1 iterations)
+Tue 10:53: INFO    : Writing current graph to: monprox2Kernel_final-simulation.pxg
+Tue 10:53: INFO    : Running kernel graph-pass 'GeneratePXG'.
+Tue 10:53: INFO    : Graph-pass 'GeneratePXG' took 70.4054 ms (1 iterations)
+Tue 10:53: INFO    : Deleting /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/Manager_monprox2.graphs
+Tue 10:53: INFO    : Running manager compiler graph-pass: GenerateMXGInfo
+Tue 10:53: INFO    : Running manager compiler graph-pass: CalculateBandwidthForward
+Tue 10:53: INFO    : Running manager compiler graph-pass: CalculateBandwidthBackward
+Tue 10:53: INFO    : Running manager compiler graph-pass: ScheduleStallLatency
+Tue 10:53: INFO    : Running manager compiler graph-pass: ClockWidthAssignment
+Tue 10:53: INFO    : Running manager compiler graph-pass: InsertDualAspectLogic
+Tue 10:53: INFO    : Running manager compiler graph-pass: ClockWidthAssignment
+Tue 10:53: INFO    : Running manager compiler graph-pass: InsertPullPushAdapter
+Tue 10:53: INFO    : Running manager compiler graph-pass: ClockWidthAssignment
+Tue 10:53: INFO    : Running manager compiler graph-pass: InsertStreamFifos
+Tue 10:53: INFO    : Running manager compiler graph-pass: ClockWidthAssignment
+Tue 10:53: INFO    : Running manager compiler graph-pass: InsertStreamStatus
+Tue 10:53: INFO    : Running manager compiler graph-pass: ClockWidthAssignment
+Tue 10:53: INFO    : Running manager compiler graph-pass: FindKernels
+Tue 10:53: INFO    : Running manager compiler graph-pass: BuildSoftwareSim
+Tue 10:53: INFO    : Mapped register report:
+Tue 10:53: INFO    : 	0	a1	4bytes
+Tue 10:53: INFO    : 	4	a2	4bytes
+Tue 10:53: INFO    : 	8	io_b1_force_disabled	1bytes
+Tue 10:53: INFO    : 	9	io_b2_force_disabled	1bytes
+Tue 10:53: INFO    : 	a	io_x1_force_disabled	1bytes
+Tue 10:53: INFO    : 	b	io_y1_force_disabled	1bytes
+Tue 10:53: INFO    : 	c	io_x2_force_disabled	1bytes
+Tue 10:53: INFO    : 	d	io_y2_force_disabled	1bytes
+Tue 10:53: INFO    : 	e	run_cycle_count	6bytes
+Tue 10:53: INFO    : 	14	current_run_cycle_count	6bytes
+Tue 10:53: INFO    : 	1a	monprox2Kernel_dbg_ctld_almost_empty	1bytes
+Tue 10:53: INFO    : 	1b	monprox2Kernel_dbg_ctld_done	1bytes
+Tue 10:53: INFO    : 	1c	monprox2Kernel_dbg_ctld_empty	1bytes
+Tue 10:53: INFO    : 	1d	monprox2Kernel_dbg_ctld_read	1bytes
+Tue 10:53: INFO    : 	1e	monprox2Kernel_dbg_ctld_read_pipe_dbg	1bytes
+Tue 10:53: INFO    : 	1f	monprox2Kernel_dbg_ctld_request	1bytes
+Tue 10:53: INFO    : 	20	monprox2Kernel_dbg_done_out	1bytes
+Tue 10:53: INFO    : 	21	monprox2Kernel_dbg_fill_level	1bytes
+Tue 10:53: INFO    : 	22	monprox2Kernel_dbg_flush_level	1bytes
+Tue 10:53: INFO    : 	23	monprox2Kernel_dbg_flush_start	1bytes
+Tue 10:53: INFO    : 	24	monprox2Kernel_dbg_flush_start_level	1bytes
+Tue 10:53: INFO    : 	25	monprox2Kernel_dbg_flushing	1bytes
+Tue 10:53: INFO    : 	26	monprox2Kernel_dbg_full_level	1bytes
+Tue 10:53: INFO    : 	27	monprox2Kernel_dbg_out_stall	1bytes
+Tue 10:53: INFO    : 	28	monprox2Kernel_dbg_out_valid	1bytes
+Tue 10:53: INFO    : 	29	monprox2Kernel_dbg_stall_vector	1bytes
+Tue 10:53: INFO    : 	2a	ifpga_ctrl	1bytes
+Tue 10:53: INFO    : 	2b	SFA_FORWARD_EN	4bytes
+Tue 10:53: INFO    : Mapped register chain length = 47
+Tue 10:53: INFO    : Mapped memory report:
+Tue 10:53: INFO    : 	No mapped memories in this design.
+Tue 10:53: INFO    : Running manager compiler graph-pass: GenerateMXGInfo
+Tue 10:53: INFO    : Running manager compiler graph-pass: GenerateSlicHostCode
+Tue 10:53: INFO    : Generating SLIC interface information
+Tue 10:53: INFO    : Generating SLIC code for interface 'default'
+Tue 10:53: INFO    : Skipping blacklisted scalar parameter 'monprox2Kernel.current_run_cycle_count'
+Tue 10:53: INFO    : Interface 'default' depends on parameter 'N'
+Tue 10:53: INFO    : Generating XML description for Maxfile
+Tue 10:53: INFO    : Generating XML description for mode 'default'
+Tue 10:53: INFO    : Skipping blacklisted scalar parameter 'monprox2Kernel.current_run_cycle_count'
+Tue 10:53: INFO    : Interface 'default' depends on parameter 'N'
+Tue 10:53: INFO    : Adding SLIC sections to the maxfile
+Tue 10:53: INFO    : Generating SLIC include file
+Tue 10:53: INFO    : Done generating SLIC interface information
+Tue 10:53: PROGRESS: Running back-end simulation build (3 phases)
+Tue 10:53: PROGRESS: (1/3) - Prepare MaxFile Data (GenerateMaxFileDataFile)
+Tue 10:53: INFO    : Build pass 'GenerateMaxFileDataFile' took 3.74884 ms.
+Tue 10:53: PROGRESS: (2/3) - Compile Simulation Modules (SimCompilePass)
+Tue 10:53: INFO    : Running command: make -j2
+Tue 10:53: INFO    : Checking for file hash changes...
+Tue 10:53: INFO    : Hash changed for file: 'tmp_resource_dump/monprox2Kernel_exec0.cpp'
+Tue 10:53: INFO    : Hash changed for file: 'tmp_resource_dump/monprox2Kernel.h'
+Tue 10:53: INFO    : Hash changed for file: 'tmp_resource_dump/monprox2Kernel.cpp'
+Tue 10:53: INFO    : Hash changed for file: '../../MaxCompilerDesignData.dat'
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -c -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -O0 -DOPTIMIZATION_LEVEL=0 -x c++-header \
+Tue 10:53: INFO    : 		-o stdsimheader.h.gch/O0_stdsimheader.h.gch stdsimheader.h
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -c -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -fno-implicit-templates -O2 -DOPTIMIZATION_LEVEL=2 -x c++-header \
+Tue 10:53: INFO    : 		-o stdsimheader.h.gch/NoTplInst_O2_stdsimheader.h.gch stdsimheader.h
+Tue 10:53: INFO    : make monprox2.so
+Tue 10:53: INFO    : make[1]: Entering directory `/home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/software-sim/build'
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -c -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -fno-implicit-templates -O2 -DOPTIMIZATION_LEVEL=2 -o objdir/monprox2Kernel_exec0.NoTplInst.O2.o monprox2Kernel_exec0.cpp
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -c -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -O0 -DOPTIMIZATION_LEVEL=0 -o objdir/monprox2Kernel.O0.o monprox2Kernel.cpp
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -MM -MP -MT objdir/monprox2Kernel_exec0.NoTplInst.O2.o \
+Tue 10:53: INFO    : 		monprox2Kernel_exec0.cpp > objdir/monprox2Kernel_exec0.NoTplInst.O2.d
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -MM -MP -MT objdir/monprox2Kernel.O0.o \
+Tue 10:53: INFO    : 		monprox2Kernel.cpp > objdir/monprox2Kernel.O0.d
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -c -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -O2 -DOPTIMIZATION_LEVEL=2 -o objdir/monprox2Kernel_Templates.O2.o monprox2Kernel_Templates.cpp
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -c -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -O0 -DOPTIMIZATION_LEVEL=0 -o objdir/max_msi.O0.o max_msi.cpp
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -MM -MP -MT objdir/monprox2Kernel_Templates.O2.o \
+Tue 10:53: INFO    : 		monprox2Kernel_Templates.cpp > objdir/monprox2Kernel_Templates.O2.d
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -fPIC -D__USE_XOPEN2K8 -O3  -I. -I/opt/maxeler/maxcompiler-2012.2/lib/boost/include -I/opt/maxeler/maxcompiler-2012.2/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/arch -I/opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/include/ipv4  -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS  -MM -MP -MT objdir/max_msi.O0.o \
+Tue 10:53: INFO    : 		max_msi.cpp > objdir/max_msi.O0.d
+Tue 10:53: INFO    : /opt/maxeler/maxcompiler-2012.2/lib/gcc/bin/g++ -fPIC -shared -L/opt/maxeler/maxcompiler-2012.2/lib/boost/lib -lboost_thread -lboost_system -lboost_filesystem -lrt -pthread -O2 -s -o monprox2.so objdir/monprox2Kernel_exec0.NoTplInst.O2.o objdir/monprox2Kernel.O0.o objdir/monprox2Kernel_Templates.O2.o objdir/max_msi.O0.o StructToGroupDummy.o Mux.o DualAspectMux.o Demux.o Fanout.o CapRegs.o IFPGARegs.o ChecksumMem.o PCIe.o KernelManagerBlockSync.o DualAspectReg.o PullPushAdapter.o FilePullSource.o max_shared_fifo.o SharedFIFO.o Fifos.o FilePushSink.o SimTerminator.o Watch.o StreamStatus.o RunLengthExpander.o ManagerBlock.o MappedElements.o ManagerSync.o PullSync.o PushSync.o DynamicVarUInt.o SimException.o DebugStreams.o AddressGenerator.o MemoryControllerPro.o MemoryControllerRAM.o MemoryControllerCommand.o MemoryControllerStreams.o MemoryControllerConfig.o TCP.o Ethernet.o Timestamp.o /opt/maxeler/maxcompiler-2012.2/lib/lwip_sim/lib/liblwip.a
+Tue 10:53: INFO    : make[1]: Leaving directory `/home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/scratch/software-sim/build'
+Tue 10:53: INFO    : Build pass 'SimCompilePass' took 8.63689 s.
+Tue 10:53: PROGRESS: (3/3) - Generate MaxFile (AddSimObjectToMaxFilePass)
+Tue 10:53: INFO    : Build pass 'AddSimObjectToMaxFilePass' took 454.868 ms.
+Tue 10:53: INFO    : Final result files after build: 
+Tue 10:53: INFO    : Running command: ln -sf "../scratch/monprox2Kernel_Configuration.txt"
+Tue 10:53: INFO    : monprox2Kernel_Configuration.txt (BuildFile)
+Tue 10:53: INFO    : Running command: ln -sf "../scratch/monprox2Kernel_NodeDiary.txt"
+Tue 10:53: INFO    : monprox2Kernel_NodeDiary.txt (BuildFile)
+Tue 10:53: INFO    : Running command: ln -sf "../scratch/monprox2.xml"
+Tue 10:53: INFO    : monprox2.xml (BuildFile)
+Tue 10:53: INFO    : Running command: ln -sf "../scratch/monprox2.h"
+Tue 10:53: INFO    : monprox2.h (BuildFileSlicH)
+Tue 10:53: INFO    : Running command: ln -sf "../scratch/monprox2.max"
+Tue 10:53: INFO    : monprox2.max (BuildFileMaxFile)
+Tue 10:53: PROGRESS: MaxFile: /home/bezanic/workspace/monpro3/RunRules/Simulation/maxfiles/monprox2_MAX3424A_DFE_SIM/results/monprox2.max (MD5Sum: b065e540f223b3655e5097dd655f7114)
+Tue 10:53: INFO    : Waiting for any outstanding jobs to finish... 
+Tue 10:53: PROGRESS: Build completed: Tue Mar 12 10:53:28 GMT 2013 (took 10 secs)

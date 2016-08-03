@@ -1,0 +1,50 @@
+Tue 16:56: ########################################## 
+Tue 16:56: Compiling.
+Tue 16:56: ########################################## 
+
+Tue 16:56: MaxCompiler version: 2012.2.
+Tue 16:56: Build DFE run rule for monpro4 start time: Tue Jun 04 16:56:40 BST 2013.
+Tue 16:56: Project location: /home/bezanic/workspace/monpro4.
+Tue 16:56: Detailed build log: /home/bezanic/workspace/monpro4/RunRules/DFE/build.log.
+
+Tue 16:56: Compiling Engine Code.
+Tue 16:56: Engine building skipped (no changes on .max files).
+Tue 16:56: Compiling CPU Code.
+Tue 16:56: Run CPU project make files updating
+Tue 16:56: Executing command:
+Tue 16:56: java -jar /opt/maxeler/maxcompiler-2012.2/lib/MaxIDE/projectAdmin.jar -u /home/bezanic/workspace/monpro4 DFE 
+Tue 16:56: Command output:
+
+Tue 16:56: MaxCompiler Project Admin Tool Version 2012.2
+Tue 16:56:  Copyright Maxeler Technologies 2010 - 2012. All rights reserved.
+Tue 16:56: Updating RunRule dependant Makefiles for RunRule 'DFE'
+Tue 16:56: Found makefiles: 1
+Tue 16:56: 	Updated: DFE
+Tue 16:56: Run CPU make.
+Tue 16:56: make RUNRULE=DFE 
+Tue 16:56: Command output:
+Tue 16:56: make -f Makefile ../RunRules/DFE/binaries/monprox4
+Tue 16:56: make[1]: Entering directory `/home/bezanic/workspace/monpro4/CPUCode'
+Tue 16:56: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/DFE/include -I. -I/opt/maxeler/maxeleros/include -I/opt/maxeler/maxcompiler-2012.2/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=monprox4 -DMAXFILE_1="monprox4.max"  -o "../RunRules/DFE/objects/monprox4CpuCode.o" -c "monprox4CpuCode.c"
+Tue 16:56: monprox4CpuCode.c: In function 'setVectors':
+Tue 16:56: monprox4CpuCode.c:142: warning: comparison between signed and unsigned integer expressions
+Tue 16:56: monprox4CpuCode.c:212: warning: comparison between signed and unsigned integer expressions
+Tue 16:56: monprox4CpuCode.c: In function 'main':
+Tue 16:56: monprox4CpuCode.c:310: warning: comparison between signed and unsigned integer expressions
+Tue 16:56: monprox4CpuCode.c:313: warning: format '%lld' expects type 'long long int', but argument 2 has type 'uint64_t'
+Tue 16:56: monprox4CpuCode.c:318: warning: comparison between signed and unsigned integer expressions
+Tue 16:56: monprox4CpuCode.c:291: warning: unused parameter 'argc'
+Tue 16:56: monprox4CpuCode.c:291: warning: unused parameter 'argv'
+Tue 16:56: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/DFE/include -I. -I/opt/maxeler/maxeleros/include -I/opt/maxeler/maxcompiler-2012.2/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=monprox4 -DMAXFILE_1="monprox4.max"  -MM -MP -MT "../RunRules/DFE/objects/monprox4CpuCode.o" "monprox4CpuCode.c" > "../RunRules/DFE/objects/monprox4CpuCode.d"
+Tue 16:56: cc ../RunRules/DFE/objects/monprox4CpuCode.o ../RunRules/DFE/objects/slic_monprox4.o  -L/opt/maxeler/maxcompiler-2012.2/lib -L/opt/maxeler/maxeleros/lib -lslic -lmaxeleros -lm -lpthread  -o "../RunRules/DFE/binaries/monprox4"
+Tue 16:56: make[1]: Leaving directory `/home/bezanic/workspace/monpro4/CPUCode'
+Tue 16:56: Build completed: Tue Jun 04 16:56:41 BST 2013
+
+
+Tue 16:56: ########################################## 
+Tue 16:56: Running
+Tue 16:56: ########################################## 
+Tue 16:56: Executing command:
+Tue 16:56: '/home/bezanic/workspace/monpro4/RunRules/DFE/binaries/monprox4' 
+Tue 16:56: Command output:
+Tue 16:56: Running DFETue 16:57: It took me 50496391182 clicks (1.89109e+10 ns).Tue 16:57: Verifying outputTue 16:57: Test passed OK!
