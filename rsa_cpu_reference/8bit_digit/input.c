@@ -1,0 +1,20 @@
+/* Bob's 1024-bit RSA encryption key */
+
+#include "def.h"
+
+u32 n_in[NUM_OF_DIGITS] = {
+0xE0, 0xAC,
+0x4F, 0x43,
+};
+
+
+u32 e_in[NUM_OF_DIGITS] = { 
+0xDE, 0xCE,
+0xC3, 0xB3,
+
+ };
+
+u32 plaintext_in[NUM_OF_DIGITS] = {
+0xCC, 0x75,
+0x9E, 0x0F,
+};
